@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {validar} from "../helpers";
-import './App1.css';
+import styles from "./Form.module.css"
 
 function Form({form}) {
   const [userData, setUserData] = useState({
@@ -44,31 +44,37 @@ function Form({form}) {
   }
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
+    <div className={styles.formContainer}>
+      <form onSubmit={submitHandler} className={styles.form}>
         <div>
-          <label>Username</label>
+          <label htmlFor="email">Username</label>
           <input
             type="text"
             name="email"
             value={userData.email}
             onChange={inputHandler}
             placeholder="correo@electronico.com"
+            className={styles.input}
           />
-          <span>{errors.email}</span>
+          <span className={styles.error}>{errors.email}</span>
         </div>
         <div>
-          <label>Passward</label>
+          <label htmlFor="password">Password</label>
           <input
             name="password"
             type="password"
             value={userData.password}
             onChange={inputHandler}
             placeholder="Password"
+            className={styles.input}
           />
         </div>
-        {errors.password && <span>{errors.password}</span>}
-        <button disabled={disableHandler()} type="submit">
+        {errors.password && <span className={styles.error}>{errors.password}</span>}
+        <button
+          disabled={disableHandler()}
+          type="submit"
+          className={styles.submitButton}
+        >
           Submit
         </button>
       </form>

@@ -1,15 +1,14 @@
-.App1 {
+.App {
     text-align: center;
   }
   
   body {
     width: 100%; 
     height: 90%; 
-    background:  #3498db; 
+    background:linear-gradient(to right, #004242, rgb(1, 91, 147), #004242);
   }
   
   img {
     max-width: 170px;
     height: auto;
   }
-  

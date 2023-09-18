@@ -1,0 +1,34 @@
+/* Estilos para el contenedor del SearchBar (searchContainer) */
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el input de búsqueda (searchInput) */
+  .searchInput {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el botón de agregar (addButton) */
+  .addButton {
+    background-color: #6584a5;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Cambio de color al pasar el mouse sobre el botón de agregar */
+  .addButton:hover {
+    background-color: #185893;
+  }
+  
+  

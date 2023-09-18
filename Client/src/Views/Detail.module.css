@@ -1,0 +1,66 @@
+/* Estilos para el contenedor principal */
+.characterDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #6584a5;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgba(2, 2, 2, 2);
+  width: 50%;
+}
+
+  
+  /* Estilos para la sección de información del personaje */
+  .characterInfo {
+    text-align: center;
+  }
+  
+  /* Estilos para el nombre del personaje */
+  .characterInfo h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para la imagen del personaje */
+  .characterInfo img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    filter: grayscale(20%);
+  }
+  
+  /* Efecto de aumento al pasar el mouse sobre la imagen */
+  .characterInfo img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+  }
+  
+  /* Estilos para la sección de atributos del personaje */
+  .characterAttributes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+  }
+  
+  /* Estilos para los elementos de atributos (Especie, Género, etc.) */
+  .attribute h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #000000;
+  }
+  
+  .attribute p {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: bold;
+    color: #444;
+  }
+  

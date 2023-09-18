@@ -1,10 +1,10 @@
 import Card from './Card';
-import "./Cards.css";
+import styles from "./Cards.module.css";
 
 function Cards({characters, onClose}) {
 
    return (
-      <div className='cardList'>
+      <div className={styles.cardsContainer}>
          {characters.map((character) => (
             <Card key={character.id} character={character} onClose={onClose} />
          ))}

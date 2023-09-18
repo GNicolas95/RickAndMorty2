@@ -1,0 +1,65 @@
+/* Estilos para el contenedor principal */
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #6584a5;
+  margin: 10px;
+  box-shadow: 1px 1px 15px rgba(2, 2, 2, 2);
+}
+
+/* Estilos para el encabezado (nombre del personaje) */
+.characterInfo h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+/* Estilos para la imagen del personaje */
+.characterImage {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto de aumento al pasar el mouse sobre la imagen */
+.characterImage:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para el botón de cerrar (X) */
+.closeButton {
+  background-color: rgb(182, 182, 182);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 6px;
+}
+
+/* Estilos para los botones de favorito (❤️ y 🤍) */
+.favoriteButton {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  background-color: #d6d6d6;
+}
+
+/* Estilos para la sección de información adicional */
+.characterDetails {
+  margin-top: 10px;
+}
+
+/* Estilos para los elementos de información (Especie y Género) */
+.characterDetails h2 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Estilo para el corazón de favorito seleccionado (❤️) */
+.favoriteButton.favorite-selected {
+  color: red; /* Cambia el color a rojo cuando está seleccionado */
+}

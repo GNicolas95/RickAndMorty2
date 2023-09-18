@@ -8,9 +8,8 @@ import ErrorPage from './Views/ErrorPage';
 import Form from "./Views/Form";
 import Favorites from './Views/Favorites';
 import About from './Views/About';
-import './App.css';
 import { useDispatch } from 'react-redux';
-
+import "./App.module.css";
 
 function App() {
   const location = useLocation();
@@ -31,7 +30,7 @@ function App() {
       access && navigate('/home');
       
     } catch (error) {
-      console.log(error)
+      alert(error)
     }
 
  }
@@ -45,19 +44,20 @@ function App() {
   }, [access]);
   
   async function searchHandler(id) {
-
     try {
-      const response = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      const data = response.data
+      const {data} = await axios(
+        `http://localhost:3001/rickandmorty/character/${id}`
+      );
+
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
       } else {
-        window.alert('¡No hay personajes con este ID!');
+        throw new Error("¡No hay personajes con este ID!");
       }
     } catch (error) {
-      console.log(err)
+      console.log(error);
+      alert(error.message);
     }
-
   }
   
 
@@ -83,7 +83,7 @@ function App() {
   }
 
   return (
-    <div className='App'>
+    <div className="App">
         {location.pathname !== "/" && (
           <NavBar 
           onSearch={searchHandler} 

@@ -1,7 +1,7 @@
 import Cards from "../components/Cards";
 import {useSelector, useDispatch} from "react-redux";
 import {orderFavorites, filterFavorites, resetFavorites} from "../redux/Actions";
-import './App1.css';
+import styles from "./Favorites.module.css"
 
 
 function Favorites() {
@@ -23,18 +23,24 @@ function Favorites() {
 
     return (
         <div>
-            <select placeholder="Gender" onChange={handleFilter}>
+            <div className={styles.filterContainer}>
+                <select placeholder="Gender" onChange={handleFilter} className={styles.select}>
                 {["Male", "Female", "unknown", "Genderless"].map((gender) => (
-                    <option key={gender} value={gender}>{gender}</option>
+                <option key={gender} value={gender}>{gender}</option>
                 ))}
-            </select>
-            <select placeholder="Order" onChange={handleSort}>
+                </select>
+                <select placeholder="Order" onChange={handleSort} className={styles.select}>
                 {["Ascendente", "Descedente"].map((order) => (
-                    <option key={order} value={order}>{order}</option>
+                <option key={order} value={order}>{order}</option>
                 ))}
-            </select>
-            <button onClick={handleReset}>Reset Filter</button>
-            <Cards characters={favorites}/>
+                </select>
+                <button onClick={handleReset} className={styles.button}>
+                Reset Filter
+                </button>
+            </div>
+            <div>
+                <Cards characters={favorites} />
+            </div>
         </div>
     )
 }

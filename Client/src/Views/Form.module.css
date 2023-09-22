@@ -4,11 +4,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
   }
   
   /* Estilos para el formulario */
   .form {
-    background-color: #a5a5a5;
+    background-color:#6584a5;
     border-radius: 10px;
     box-shadow: 1px 1px 15px rgba(2, 2, 2, 2);
     padding: 50px;
@@ -44,7 +45,7 @@
   
   /* Estilos para el botón de envío (submit) */
   .submitButton {
-    background-color:#6584a5;
+    background-color:#30669f;
     color: #fff;
     border: none;
     padding: 10px 20px;
